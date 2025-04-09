@@ -13,6 +13,11 @@ public class Inscripcion {
 
   public boolean materiaAprobada(List<String> materiasAlumno, Materia materiaInscripcion){
     List<String> correlativas = materiaInscripcion.getCorrelativas();
+
+    if(correlativas == null || correlativas.isEmpty()){
+      return true;
+    }
+
     return new HashSet<>(materiasAlumno).containsAll(correlativas);
   }
 
