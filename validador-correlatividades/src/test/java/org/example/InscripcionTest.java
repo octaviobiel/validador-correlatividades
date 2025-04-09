@@ -13,10 +13,8 @@ class InscripcionTest {
   public void puedeInscribirseAMateria(){
     Materia unaMateria = new Materia();
     unaMateria.setNombre("Algoritmos");
-    unaMateria.setAprobada(true);
     Materia otraMateria = new Materia();
     otraMateria.setNombre("Paradigmas");
-    otraMateria.setAprobada(true);
     Materia materiaAInscribirse = new Materia();
     materiaAInscribirse.setNombre("Disenio");
     materiaAInscribirse.setCorrelativas(List.of("Algoritmos", "Paradigmas"));
@@ -26,7 +24,7 @@ class InscripcionTest {
     materias.add(otraMateria);
 
     Alumno alumno = new Alumno();
-    alumno.setMaterias(materias);
+    alumno.setMateriasAprobadas(materias);
 
     Inscripcion inscripcion = new Inscripcion();
 
@@ -38,20 +36,15 @@ class InscripcionTest {
   public void noPuedeInscribirseAMateria(){
     Materia unaMateria = new Materia();
     unaMateria.setNombre("Algoritmos");
-    unaMateria.setAprobada(true);
-    Materia otraMateria = new Materia();
-    otraMateria.setNombre("Paradigmas");
-    otraMateria.setAprobada(false);
     Materia materiaAInscribirse = new Materia();
     materiaAInscribirse.setNombre("Disenio");
     materiaAInscribirse.setCorrelativas(List.of("Algoritmos", "Paradigmas"));
 
     List<Materia> materias = new ArrayList<>();
     materias.add(unaMateria);
-    materias.add(otraMateria);
 
     Alumno alumno = new Alumno();
-    alumno.setMaterias(materias);
+    alumno.setMateriasAprobadas(materias);
 
     Inscripcion inscripcion = new Inscripcion();
 
@@ -62,10 +55,8 @@ class InscripcionTest {
   public void puedeInscribirseAVariasMaterias(){
     Materia unaMateria = new Materia();
     unaMateria.setNombre("Algoritmos");
-    unaMateria.setAprobada(true);
     Materia otraMateria = new Materia();
     otraMateria.setNombre("AnalisisUno");
-    otraMateria.setAprobada(true);
 
     Materia unaMateriaAInscribirse = new Materia();
     unaMateriaAInscribirse.setNombre("Sintaxis");
@@ -79,7 +70,7 @@ class InscripcionTest {
     materias.add(otraMateria);
 
     Alumno alumno = new Alumno();
-    alumno.setMaterias(materias);
+    alumno.setMateriasAprobadas(materias);
 
     Inscripcion inscripcion = new Inscripcion();
 
@@ -90,7 +81,6 @@ class InscripcionTest {
   public void noPuedeInscribirseAVariasMaterias(){
     Materia unaMateria = new Materia();
     unaMateria.setNombre("Algoritmos");
-    unaMateria.setAprobada(true);
 
     Materia unaMateriaAInscribirse = new Materia();
     unaMateriaAInscribirse.setNombre("Sintaxis");
@@ -103,7 +93,7 @@ class InscripcionTest {
     materias.add(unaMateria);
 
     Alumno alumno = new Alumno();
-    alumno.setMaterias(materias);
+    alumno.setMateriasAprobadas(materias);
 
     Inscripcion inscripcion = new Inscripcion();
 

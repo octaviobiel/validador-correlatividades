@@ -9,7 +9,6 @@ import lombok.Setter;
 public class Materia {
 
   private String nombre;
-  private boolean aprobada;
   private List<String> correlativas;
 
 }

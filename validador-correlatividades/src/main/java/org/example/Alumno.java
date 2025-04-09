@@ -12,11 +12,10 @@ public class Alumno {
   private String nombre;
   private String apellido;
   private String legajo;
-  private List<Materia> materias;
+  private List<Materia> materiasAprobadas;
 
   public List<String> getNombreMateriasAprobadas() {
-    return this.materias.stream()
-        .filter(Materia::isAprobada)
+    return this.materiasAprobadas.stream()
         .map(Materia::getNombre)
         .collect(Collectors.toList());
   }

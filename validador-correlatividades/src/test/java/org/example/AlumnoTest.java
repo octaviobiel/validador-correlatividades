@@ -14,19 +14,17 @@ class AlumnoTest {
   public void obtenerNombreMateriasAprobadas(){
     Materia unaMateria = new Materia();
     unaMateria.setNombre("Algoritmos");
-    unaMateria.setAprobada(true);
     Materia otraMateria = new Materia();
     otraMateria.setNombre("Paradigmas");
-    otraMateria.setAprobada(false);
 
     List<Materia> materias = new ArrayList<>();
     materias.add(unaMateria);
     materias.add(otraMateria);
 
     Alumno alumno = new Alumno();
-    alumno.setMaterias(materias);
+    alumno.setMateriasAprobadas(materias);
 
-    Assertions.assertEquals(List.of("Algoritmos"), alumno.getNombreMateriasAprobadas());
+    Assertions.assertEquals(List.of("Algoritmos", "Paradigmas"), alumno.getNombreMateriasAprobadas());
   }
 
 }
