@@ -16,10 +16,10 @@ class InscripcionTest {
     unaMateria.setAprobada(true);
     Materia otraMateria = new Materia();
     otraMateria.setNombre("Paradigmas");
-    otraMateria.setAprobada(false);
+    otraMateria.setAprobada(true);
     Materia materiaAInscribirse = new Materia();
-    materiaAInscribirse.setNombre("Sintaxis");
-    materiaAInscribirse.setCorrelativas(List.of("Algoritmos"));
+    materiaAInscribirse.setNombre("Disenio");
+    materiaAInscribirse.setCorrelativas(List.of("Algoritmos", "Paradigmas"));
 
     List<Materia> materias = new ArrayList<>();
     materias.add(unaMateria);
